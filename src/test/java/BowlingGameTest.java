@@ -17,4 +17,11 @@ public class BowlingGameTest {
         int score = bowlingGame.bowling(new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
         assertEquals(0, score);
     }
+
+    @Test
+    void should_return_correct_score_when_bowling () {
+        BowlingGame bowlingGame = new BowlingGame();
+        int score = bowlingGame.bowling(new int[] {3, 7, 10, 4, 6, 2, 2, 4, 3, 10, 5, 5, 4, 3, 6, 1, 7, 3, 10});
+        assertEquals(131, score);
+    }
 }
