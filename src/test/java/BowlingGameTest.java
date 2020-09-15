@@ -10,4 +10,11 @@ public class BowlingGameTest {
         int score = bowlingGame.bowling(new int[] {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10});
         assertEquals(300, score);
     }
+
+    @Test
+    void should_return_zero_score_when_bowling_all_miss () {
+        BowlingGame bowlingGame = new BowlingGame();
+        int score = bowlingGame.bowling(new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
+        assertEquals(0, score);
+    }
 }
